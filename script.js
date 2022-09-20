@@ -3,20 +3,20 @@
 //OBJETO 01
 //ANTES
 authorBook1 = {
-    author : 'John Ronald Reuel Tolkien',
-    numberBooks : 40,
-    live : false,
-    bestBooks : ['The Silmarillion', 'The Lord Of The Rings', 'The Hobbit']
+    author: 'John Ronald Reuel Tolkien',
+    numberBooks: 40,
+    live: false,
+    bestBooks: ['The Silmarillion', 'The Lord Of The Rings', 'The Hobbit']
 }
 
 //TORNANDO ARRAY EM LAÇO - DEPOIS
 let bestBooks1 = ""
-for(i in authorBook1.bestBooks){
-   nBook = authorBook1.bestBooks.length - 1
-   bestBooks1 += authorBook1.bestBooks[i];
-   if(i < nBook){
-    bestBooks1 += ', '
-}
+for (i in authorBook1.bestBooks) {
+    nBook = authorBook1.bestBooks.length - 1
+    bestBooks1 += authorBook1.bestBooks[i];
+    if (i < nBook) {
+        bestBooks1 += ', '
+    }
 }
 
 //Imprimindo
@@ -26,64 +26,67 @@ console.log(authorBook1)
 //OBJETO 02
 
 authorBook2 = {
-    author : 'CLive Staples Lewis',
+    author: 'CLive Staples Lewis',
     numberBooks: 49,
-    live : false,
-    bestBooks : ['Till We Have Face', 'The Screwtappers Letters', 'Chronicles Of Narnia: The Last Battle']
+    live: false,
+    bestBooks: ['Till We Have Face', 'The Screwtappers Letters', 'Chronicles Of Narnia: The Last Battle']
 }
 
 
 //TORNANDO ARRAY EM LAÇO - DEPOIS
 let bestBooks2 = ""
-for(i in authorBook2.bestBooks){
-   nBook = authorBook2.bestBooks.length - 1
-   bestBooks2 += authorBook2.bestBooks[i];
-   if(i < nBook){
-    bestBooks2 += ', '
-}
+for (i in authorBook2.bestBooks) {
+    nBook = authorBook2.bestBooks.length - 1
+    bestBooks2 += authorBook2.bestBooks[i];
+    if (i < nBook) {
+        bestBooks2 += ', '
+    }
 }
 
 authorBook2.bestBooks = bestBooks2;
 console.log(authorBook2)
 
+//OBJETO 03
 authorBook3 = {
-    author : 'John Piper',
+    author: 'John Piper',
     numberBooks: 49,
-    live : true,
+    live: true,
     age: 79,
-    bestBooks : ['Desiring God', 'Providence', 'Don´t Waste Your Cancer']
+    bestBooks: ['Desiring God', 'Providence', 'Don´t Waste Your Cancer']
 }
 
 //TORNANDO ARRAY EM LAÇO - DEPOIS
 let bestBooks3 = ""
-for(i in authorBook3.bestBooks){
-   nBook = authorBook3.bestBooks.length - 1
-   bestBooks3 += authorBook3.bestBooks[i];
-   if(i < nBook){
-    bestBooks3 += ', '
-}
+for (i in authorBook3.bestBooks) {
+    nBook = authorBook3.bestBooks.length - 1
+    bestBooks3 += authorBook3.bestBooks[i];
+    if (i < nBook) {
+        bestBooks3 += ', '
+    }
 }
 
 
 authorBook3.bestBooks = bestBooks3;
 console.log(authorBook3)
 
+
+//OBJETO 04
 authorBook4 = {
-    author : 'Timothy Keller',
+    author: 'Timothy Keller',
     numberBooks: 52,
-    live : true,
+    live: true,
     age: 72,
-    bestBooks : ['Center Church', 'On Birth', 'Counterfeit Gods']
+    bestBooks: ['Center Church', 'On Birth', 'Counterfeit Gods']
 }
 
 //TORNANDO ARRAY EM LAÇO - DEPOIS
 let bestBooks4 = ""
-for(i in authorBook4.bestBooks){
-   nBook = authorBook4.bestBooks.length - 1
-   bestBooks4 += authorBook4.bestBooks[i];
-   if(i < nBook){
-    bestBooks4 += ', '
-}
+for (i in authorBook4.bestBooks) {
+    nBook = authorBook4.bestBooks.length - 1
+    bestBooks4 += authorBook4.bestBooks[i];
+    if (i < nBook) {
+        bestBooks4 += ', '
+    }
 }
 
 
@@ -93,27 +96,51 @@ console.log(authorBook4)
 //CRIANDO O ARRAY
 const authorsLive = []
 //CRIANDO AS CONDIÇÕES PARA O PUSH DO ARRAY 2   
-if(authorBook1.live){
+if (authorBook1.live) {
     authorsLive.push(authorBook1)
-} else{
+} else {
     console.log(authorBook1.author + ' não adicionado')
-} 
+}
 
-if(authorBook2.live){
+if (authorBook2.live) {
     authorsLive.push(authorBook2)
-} else{
-   console.log(authorBook2.author + ' não adicionado')
-} 
+} else {
+    console.log(authorBook2.author + ' não adicionado')
+}
 
 
-if(authorBook3.live){
+if (authorBook3.live) {
     authorsLive.push(authorBook3)
-} else{
+} else {
     console.log(authorBook3.author + ' não adicionado')
-} 
+}
 
-if(authorBook4.live){
+if (authorBook4.live) {
     authorsLive.push(authorBook4)
-} else{
+} else {
     console.log(authorBook4.author + ' não adicionado')
-} 
+}
+
+//ANTES
+
+/*
+console.log('Author: ', authorsLive[0].author);
+console.log('Number of books:', authorsLive[0].numberBooks);
+console.log('He is living?: ', authorsLive[0].live);
+console.log('Age: ', authorsLive[0].age);
+console.log('Best books: ', authorsLive[0].bestBooks);
+*/
+
+for(author of authorsLive){
+    for(props in author){
+        console.log(props,':', author[props]);
+    }
+}
+
+console.log(authorsLive.name)
+
+// function arr(obj, str){
+//     const search = obj.filter((ind)=>{
+//         return  
+//     })
+// }
