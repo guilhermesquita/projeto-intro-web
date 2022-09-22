@@ -99,30 +99,29 @@ const authorsLive = []
 if (authorBook1.live) {
     authorsLive.push(authorBook1)
 } else {
-    console.log(authorBook1.author + ' não adicionado')
+    alert(authorBook1.author + ' não adicionado')
 }
 
 if (authorBook2.live) {
     authorsLive.push(authorBook2)
 } else {
-    console.log(authorBook2.author + ' não adicionado')
+    alert(authorBook2.author + ' não adicionado')
 }
 
 
 if (authorBook3.live) {
     authorsLive.push(authorBook3)
 } else {
-    console.log(authorBook3.author + ' não adicionado')
+    alert(authorBook3.author + ' não adicionado')
 }
 
 if (authorBook4.live) {
     authorsLive.push(authorBook4)
 } else {
-    console.log(authorBook4.author + ' não adicionado')
+    alert(authorBook4.author + ' não adicionado')
 }
 
 //ANTES
-
 /*
 console.log('Author: ', authorsLive[0].author);
 console.log('Number of books:', authorsLive[0].numberBooks);
@@ -131,16 +130,27 @@ console.log('Age: ', authorsLive[0].age);
 console.log('Best books: ', authorsLive[0].bestBooks);
 */
 
-for(author of authorsLive){
-    for(props in author){
-        console.log(props,':', author[props]);
+//DEPOIS
+for (author of authorsLive) {
+    for (props in author) {
+        console.log(props, ':', author[props]);
     }
 }
 
-console.log(authorsLive.name)
 
-// function arr(obj, str){
-//     const search = obj.filter((ind)=>{
-//         return  
-//     })
-// }
+function arr(obj, str) {
+
+    if (str === obj[0].author || str == obj[1].author) {
+        const search = obj.filter((ind) => {
+            return ind.author === str;
+        }) 
+        return search[0]
+    } 
+    if(str !== obj[0].author && str !== obj[1].author){
+        const notFound = alert('Autor não encontrado')
+        return notFound;
+    }
+}
+
+let filtro = arr(authorsLive, prompt('Digite o nome do autor: '))
+console.log(filtro)
